@@ -39,5 +39,27 @@ class TestHospital(unittest.TestCase):
 
     def testinit(self):
         """ checks to verify initial values """
-        self.assertEqual([self.hosp.name,0,0,0],['Mulago'])
+        self.assertEqual([self.hosp.name,0,0,{},{}],['Mulago',self.hosp.num_of_docs,
+        self.hosp.num_of_patients,self.hosp.doctors,self.hosp.patients])
+
+    def test_add_doctor(self):
+        """ checks if doctor has been added """
+        self.hosp.add_doctor('Paul', 'Nyondo', 'M')
+        self.assertEqual(1,self.hosp.num_of_docs)
+        self.assertTrue(isinstance(self.hosp.doctors[0],Doctor))
+
+    def test_add_patient(self):
+        """ checks if patient has been added """
+        self.hosp.add_patient('Paul', 'Nyondo', 'M')
+        self.assertEqual(1,self.hosp.num_of_patients)
+        self.assertTrue(isinstance(self.hosp.patients[0],Patient))
+
+    def testtreatment(self):
+        """ checks if patient has been treated """
+        self.hosp.add_patient('Paul', 'Nyondo', 'M')
+        self.hosp.add_doctor('Ben', 'Nyondo', 'M')
+        self.hosp.treat(self.hosp.doctors[0],self.hosp.patients[0])
+        self.assertFalse(self.hosp.patients[0].sick)
+
+
 unittest.main()
