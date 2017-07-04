@@ -24,6 +24,7 @@ class Doctor(Person):
 
 
 class Hospital(object):
+    """ Methods that describe how a hospital works"""
     def __init__(self, name):
         self.name = name
         self.num_of_docs = 0
