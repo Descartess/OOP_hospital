@@ -66,7 +66,7 @@ class TestHospital(unittest.TestCase):
         self.hosp.add_patient('Paul', 'Nyondo', 'M')
         self.hosp.add_doctor('Ben', 'Nyondo', 'M')
         self.hosp.treat(0,0)
-        self.hosp.dischargepatient()
+        self.hosp.discharge()
         self.assertDictEqual(self.hosp.patients,{})
 
 unittest.main()
