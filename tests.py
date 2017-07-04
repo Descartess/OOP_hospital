@@ -58,8 +58,15 @@ class TestHospital(unittest.TestCase):
         """ checks if patient has been treated """
         self.hosp.add_patient('Paul', 'Nyondo', 'M')
         self.hosp.add_doctor('Ben', 'Nyondo', 'M')
-        self.hosp.treat(self.hosp.doctors[0],self.hosp.patients[0])
+        self.hosp.treat(0,0)
         self.assertFalse(self.hosp.patients[0].sick)
 
+    def testdischarge_patient(self):
+        """ discharges treated patients """
+        self.hosp.add_patient('Paul', 'Nyondo', 'M')
+        self.hosp.add_doctor('Ben', 'Nyondo', 'M')
+        self.hosp.treat(0,0)
+        self.hosp.dischargepatient()
+        self.assertDictEqual(self.hosp.patients,{})
 
 unittest.main()
