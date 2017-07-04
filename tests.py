@@ -17,7 +17,7 @@ class TestDoctor(unittest.TestCase):
     def setUp(self):
         self.doc = Doctor('Morgan', 'Freeman', 'M')
     def testdoc(self):
-        """ tests for the __init__ method """g
+        """ tests for the __init__ method """
         self.assertEqual([self.doc.first_name, self.doc.last_name,
         self.doc.sex],['Morgan','Freeman','M'])
 
@@ -33,9 +33,11 @@ class TestPatient(unittest.TestCase):
         """ checks if admitted patient is sick"""
         self.assertTrue(self.patient.sick)
 class TestHospital(unittest.TestCase):
+    """ functions to test hospital class"""
     def setUp(self):
         self.hosp = Hospital('Mulago')
 
-    def testname(self):
-        self.assertEqual(self.hosp.name,'Mulago')
+    def testinit(self):
+        """ checks to verify initial values """
+        self.assertEqual([self.hosp.name,0,0,0],['Mulago'])
 unittest.main()
