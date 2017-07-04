@@ -1,6 +1,6 @@
 """ Tests for hospital oop design """
 import unittest
-from hospital import Person, Patient, Doctor
+from hospital import Person, Patient, Doctor, Hospital
 
 class TestPerson(unittest.TestCase):
     """ tests for the Person class """
@@ -17,7 +17,7 @@ class TestDoctor(unittest.TestCase):
     def setUp(self):
         self.doc = Doctor('Morgan', 'Freeman', 'M')
     def testdoc(self):
-        """ tests for the __init__ method """
+        """ tests for the __init__ method """g
         self.assertEqual([self.doc.first_name, self.doc.last_name,
         self.doc.sex],['Morgan','Freeman','M'])
 
@@ -32,5 +32,10 @@ class TestPatient(unittest.TestCase):
     def testssickeness(self):
         """ checks if admitted patient is sick"""
         self.assertTrue(self.patient.sick)
+class TestHospital(unittest.TestCase):
+    def setUp(self):
+        self.hosp = Hospital('Mulago')
 
+    def testname(self):
+        self.assertEqual(self.hosp.name,'Mulago')
 unittest.main()
