@@ -1,5 +1,6 @@
 class Person(object):
-    def __init__(self, first_name, second_name, sex):
+    """ Parent class for doctors and patiets"""
+    def __init__(self, first_name, last_name, sex):
         self.first_name = first_name
-        self.second_name = second_name
+        self.last_name = last_name
         self.sex = sex
