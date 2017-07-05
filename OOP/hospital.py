@@ -33,17 +33,17 @@ class Hospital(object):
         self.doctors = {}
         self.patients = {}
 
-    def add_doctor(self,first_name, last_name, sex):
+    def add_doctor(self, first_name, last_name, sex):
         """ hire doctors """
         doc = Doctor(first_name, last_name, sex)
         self.doctors[self.num_of_docs] = doc
-        self.num_of_docs +=1
+        self.num_of_docs += 1
 
-    def add_patient(self,first_name, last_name, sex):
+    def add_patient(self, first_name, last_name, sex):
         """ check in patients """
         pat = Patient(first_name, last_name, sex)
         self.patients[self.num_of_patients] = pat
-        self.num_of_patients +=1
+        self.num_of_patients += 1
 
     def treat(self, doctor, patient):
         """ Function that gets a doctor to treat patient"""
