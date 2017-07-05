@@ -1,33 +1,7 @@
-# OOP_hospital
-This demonstrates the working of an ordinary clinic using object oriented programming concepts
+## Andela Day 2 SLC
+This contains solutions to day 2 challenges from Andela
 
-## Usage 
-```
-from hospital import Hospital 
 
-# add doctor
-Hospital.add_doctor('Paul','Nyondo','M')
 
-# add patient
-Hospital.add_patient('Sirius','Black','M')
-
-#treat patient 
-Hospital.treat(0,0) #doctor_id and patient_id
-
-#discharge patient
-Hospital.discharge()
-
-```
-
-Other attributes of the clinic can be gotten such as number of patients, doctors 
-
-```
-    # get number of doctors
-    Hospital.num_of_doctors
-
-    #get number of patients
-    Hospital.num_of_patients
-
-```
 
 
