@@ -1,3 +1,4 @@
+""" Hospital management using OOP """
 class Person(object):
     """ Parent class for doctors and patients"""
     def __init__(self, first_name, last_name, sex):
@@ -59,8 +60,4 @@ class Hospital(object):
                 discharged.append(patient)
         for patient in discharged:
             self.patients.pop(patient)
-
-
-
-
     
