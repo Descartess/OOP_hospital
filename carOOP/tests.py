@@ -1,6 +1,6 @@
 """Unit test for CarClass"""
 import unittest
-from car import Car
+from Car import Car
 
 class Test(unittest.TestCase):
     """Unit test for CarClass"""
@@ -99,4 +99,5 @@ class Test(unittest.TestCase):
                              [moving_man_instance, moving_man_type, moving_man.speed],
                              msg='The car drive function should return'
                                  ' the instance of the Car class')
-                                 
+
+unittest.main()
