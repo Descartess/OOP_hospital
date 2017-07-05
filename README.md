@@ -8,7 +8,7 @@ from hospital import Hospital
 # add doctor
 Hospital.add_doctor('Paul','Nyondo','M')
 
-# add doctor
+# add patient
 Hospital.add_patient('Sirius','Black','M')
 
 #treat patient 
